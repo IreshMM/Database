@@ -74,7 +74,7 @@ CREATE TABLE Subject_ (
 );
 
 CREATE TABLE Enrollment (
-	EnrollmentID INT(8),
+	EnrollmentID INT(8) AUTO_INCREMENT,
 	StudentID INT(6) NOT NULL,
     SubjectCode CHAR(10) NOT NULL,
     ResultGrade ENUM('A', 'B', 'C', 'D', 'E', 'F', 'R')  NOT NULL DEFAULT 'R',
