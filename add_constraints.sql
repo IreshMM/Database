@@ -1,5 +1,7 @@
 ALTER TABLE Student
-ADD CONSTRAINT fks_course_code FOREIGN KEY(CourseCode) REFERENCES Course(CourseCode);
+ADD CONSTRAINT fks_course_code FOREIGN KEY(CourseCode) REFERENCES Course(CourseCode)
+ON DELETE RESTRICT
+ON UPDATE CASCADE;
 
 ALTER TABLE PQualification
 ADD CONSTRAINT fkp_student_id FOREIGN KEY(StudentID) REFERENCES Student(StudentID)
