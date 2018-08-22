@@ -1,5 +1,2 @@
-DELIMITER //
-
-/*
- 
-*/
+insert into Student (StudentID, NICNumber, IndexNumber, FirstName, LastName, DOB, Address, Phone, Email, CourseCode) values 
+(11, '19134443974v', '18005154', 'Meghan', 'Staff', '1994-04-18', '4611 Loftsgordon Parkway', '94775632847', 'mstaff0@bizjournals.com', 'SE01');

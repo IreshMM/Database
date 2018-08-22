@@ -83,9 +83,9 @@ CREATE TABLE Enrollment (
 );
 
 CREATE TABLE Payment (
-	InvoiceID INT(4),
+	InvoiceID INT(4) AUTO_INCREMENT,
     Description VARCHAR(100) NOT NULL,
-    Amount INT(6) NOT NULL,
+    Amount DOUBLE PRECISION(8, 2) NOT NULL,
     PRIMARY KEY(InvoiceID)
 );
 
@@ -116,10 +116,11 @@ CREATE TABLE Lecture (
 );
 
 CREATE TABLE Assessment (
-	AssessmentID INT(4),
+	AssessmentID INT(4) AUTO_INCREMENT,
     EnrollmentID INT(8) NOT NULL,
     AssessmentType CHAR(8) NOT NULL,
     Title VARCHAR(50) NOT NULL,
+    ResultGrade ENUM('A', 'B', 'C', 'D', 'E', 'F', 'R')  NOT NULL DEFAULT 'R',
     PRIMARY KEY(AssessmentID)
 );
 
